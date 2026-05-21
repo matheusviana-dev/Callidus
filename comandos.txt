@@ -1,0 +1,127 @@
+
+Callidus@AVNB24110269 MINGW64 ~
+$ git config --global user.name MatheusViana
+
+Callidus@AVNB24110269 MINGW64 ~
+$ git config --global user.email matheus.pantoja.viana@gmail.com
+
+Callidus@AVNB24110269 MINGW64 ~
+$ git config --global --list
+user.name=MatheusViana
+user.email=matheus.pantoja.viana@gmail.com
+
+Callidus@AVNB24110269 MINGW64 ~
+$ git config --global init.defaultBranch main
+
+Callidus@AVNB24110269 MINGW64 ~
+$ mkdir Callidus
+
+Callidus@AVNB24110269 MINGW64 ~
+$ cd Callidus
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus
+$ git init
+Initialized empty Git repository in C:/Users/Callidus/Callidus/.git/
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ echo "# Meu primeiro projeto com Git" > README.md
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ dir
+README.md
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ ^C
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git commit -m "Primeiro Commit: adiciona README"
+[main (root-commit) e8c628a] Primeiro Commit: adiciona README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git log
+commit e8c628a42a8f86656256f2db62f75c1fac484385 (HEAD -> main)
+Author: MatheusViana <matheus.pantoja.viana@gmail.com>
+Date:   Thu May 14 11:31:37 2026 -0400
+
+    Primeiro Commit: adiciona README
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        comandos.txt
+
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git commit -m "alteração no texto"
+[main 476f2f1] alteração no texto
+ 1 file changed, 1 insertion(+)
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git log --oneline
+476f2f1 (HEAD -> main) alteração no texto
+e8c628a Primeiro Commit: adiciona README
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
+$ git log
+commit 476f2f1acd63cf6ddd75a23b3095bc5b26a52e09 (HEAD -> main)
+Author: MatheusViana <matheus.pantoja.viana@gmail.com>
+Date:   Thu May 14 11:45:15 2026 -0400
+
+    alteração no texto
+
+commit e8c628a42a8f86656256f2db62f75c1fac484385
+Author: MatheusViana <matheus.pantoja.viana@gmail.com>
+Date:   Thu May 14 11:31:37 2026 -0400
+
+    Primeiro Commit: adiciona README
+
+Callidus@AVNB24110269 MINGW64 ~/Callidus (main)
